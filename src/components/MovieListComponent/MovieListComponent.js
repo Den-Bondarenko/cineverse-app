@@ -1,17 +1,11 @@
-import React, {useState, useEffect} from "react";
-import { MovieCardComponent } from "../MovieCardComponent/MovieCardComponent";
-import { getPopularMovies } from "../../api/queries";
+import React from "react";
+import { MovieComponent } from "../MovieComponent/MovieComponent";
 
-export const MovieListComponent = () => {
-    const [movies, setMovies] = useState([]);
-
-    useEffect(() =>{
-        getPopularMovies().then(setMovies);
-    }, []);
-
+export const MovieListComponent = ({movies}) => {
+    console.log(movies);
+    const movieList = movies.map((movie) => <MovieComponent {...movie}/>);
+  
     return (
-        <div>
-            <MovieCardComponent />
-        </div>
+        <div>{movieList}</div>
     );
 };
