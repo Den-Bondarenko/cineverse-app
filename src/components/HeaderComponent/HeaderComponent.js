@@ -1,12 +1,16 @@
 import React from "react";
-import "/workspace/cineverse-app/src/components/HeaderComponent/HeaderComponent.css";
+import { SearchComponent } from "../SearchComponent/SearchComponent";
+import "./HeaderComponent.css";
 
 
-export const HeaderComponent = () => {
+
+export const HeaderComponent = (setMovies) => {
+    
     return(
         <header>
-            <div className="container">
+            <div className="header">
                 <h1>Cineverse</h1>
+                <SearchComponent {...setMovies} />
             </div>
         </header>
     );

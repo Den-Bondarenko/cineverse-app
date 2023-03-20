@@ -1,0 +1,8 @@
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster {
+    width: 200px;
+}
