@@ -1,0 +1,11 @@
+.movieList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1200PX;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}

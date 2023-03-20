@@ -6,20 +6,34 @@ import { getPopularMovies } from './api/queries';
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [favoruites, setFavourites] = useState([]);
+  console.log(favoruites);
   
 
   useEffect(() =>{
-
-    getPopularMovies(setMovies).then();
-    console.log(movies);
+    getPopularMovies().then(setMovies);
   }, []);
 
-  console.log(movies);
+  const searchMovies = (movies) => {
+    setMovies(movies);
+  };
+
+  const addFavouriteMovie = (movie) => {
+    const newFavourites = [...favoruites, movie];
+    setFavourites(newFavourites);
+  };
 
   return (
     <div className="App">
-      <HeaderComponent {...setMovies}/>
-      <MovieSectionComponent movies={movies}/>
+      <HeaderComponent  searchMovies = {searchMovies}/>
+      <MovieSectionComponent 
+        movies={movies}
+        handleFavouritesClick = {addFavouriteMovie}
+      />
+      <MovieSectionComponent 
+        movies={favoruites}
+        handleFavouritesClick = {addFavouriteMovie}
+      />
     </div>
   );
 }

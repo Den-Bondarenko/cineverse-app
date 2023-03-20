@@ -12,7 +12,6 @@ const fetchData = async (url) => {
 };
 
 
-
-export const getPopularMovies = async () => await fetchData(`${url}/discover/movie?${apiKey}`, setMovies);
-export const getSearchedMovies = async (term) => await fetchData(`${url}search/movie?${apiKey}&query=${term}`, setMovies);
+export const getPopularMovies = async () => await fetchData(`${url}/discover/movie?${apiKey}`);
+export const getSearchedMovies = async (term) => await fetchData(`${url}search/movie?${apiKey}&query=${term}`);
 

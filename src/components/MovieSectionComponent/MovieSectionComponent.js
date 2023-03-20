@@ -1,9 +1,14 @@
 import React from "react";
 import { MovieListComponent } from "../MovieListComponent/MovieListComponent";
 
-export const MovieSectionComponent = ({movies}) => {
+export const MovieSectionComponent = ({movies, handleFavouritesClick}) => {
 
     return (
-        <div><MovieListComponent movies={movies}/></div>
+        <div className="movieSection">
+            <MovieListComponent 
+                movies={movies} 
+                handleFavouritesClick = {handleFavouritesClick}
+            />
+        </div>
     );
 };

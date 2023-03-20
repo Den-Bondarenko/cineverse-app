@@ -4,13 +4,14 @@ import "./HeaderComponent.css";
 
 
 
-export const HeaderComponent = (setMovies) => {
+export const HeaderComponent = ({searchMovies}) => {
     
     return(
         <header>
             <div className="header">
                 <h1>Cineverse</h1>
-                <SearchComponent {...setMovies} />
+                <button>Favourite</button>
+                <SearchComponent searchMovies={searchMovies}/>
             </div>
         </header>
     );
