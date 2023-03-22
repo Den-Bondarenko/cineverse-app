@@ -19,3 +19,9 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+@media (min-width: 1300px) {
+    .movieList {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
