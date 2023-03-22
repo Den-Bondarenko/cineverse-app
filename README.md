@@ -1,4 +1,4 @@
-Link to live server - cineverse-app-ym29.vercel.app
+# Link to live server - [cineverse-app-ym29.vercel.app](https://cineverse-app-ym29.vercel.app/)
 
 # Getting Started with Create React App
 
