@@ -1,0 +1,37 @@
+.header {
+    background-color: #07112b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+@media (min-width: 730px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.header .nav {
+    background-color: #07112b;
+}
+
+.header .nav .navButton {
+    
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(42, 44, 59);
+    transition-duration: 0.4s;
+}
+
+.header .nav .navButton:hover {
+    background-color: white;
+    color: black;
+
+}
