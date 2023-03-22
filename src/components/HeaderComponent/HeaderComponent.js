@@ -10,7 +10,7 @@ export const HeaderComponent = ({searchMovies, handleCategory}) => {
     return(
         <header>
             <div className="header">
-                <h1>Cineverse</h1>
+                <h1 className="logo">Cineverse</h1>
                 <div className="nav">
                     <button onClick={() => handleCategory("top rated")} className="navButton">Top Rated</button>
                     <button onClick={() => handleCategory("upcoming")} className="navButton">Upcoming</button>

@@ -22,15 +22,21 @@ function App() {
     setMovies(movies);
   };
 
-  const addWatchedeMovie = (movie) => {
+  const addWatchedMovie = (movie) => {
     if(!watchedMovies.includes(movie)){
       setWatchedMovies([...watchedMovies, movie]);
     };
   };
 
-  const handleCategory = (category) => {
-      setCategory(category);
+  const removeWatchedMovie = (movie) => {
+    setWatchedMovies(watchedMovies => watchedMovies.filter(watchedMovie => watchedMovie !== movie));
+    setMovies(watchedMovies);
   };
+
+
+  const handleCategory = (category) => {
+    setCategory(category);
+  }
 
   if (currentCategory !== category) {
     switch (category) {
@@ -64,7 +70,8 @@ function App() {
       />
       <MovieSectionComponent 
         movies = {movies}
-        handleWatchClick = {addWatchedeMovie}
+        handleWatchClick = {addWatchedMovie}
+        removeWatchedMovie = {removeWatchedMovie}
       />
     </div>
   );

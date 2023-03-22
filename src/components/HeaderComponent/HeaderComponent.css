@@ -1,27 +1,36 @@
 .header {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #0c2030;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.header h1 {
+    background-color: #07112b;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
 }
 
-.navButton {
-    border-radius: 2px;
+@media (min-width: 730px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.header .nav {
+    background-color: #07112b;
+}
+
+.header .nav .navButton {
+    
+    border-radius: 5px;
     display: inline-block;
     border: none;
     color: white;
     padding: 5px;
-    margin-right: 10px;
+    margin: 5px;
     background-color: rgb(42, 44, 59);
     transition-duration: 0.4s;
 }
 
-.navButton:hover {
+.header .nav .navButton:hover {
     background-color: white;
     color: black;
 
