@@ -1,5 +1,5 @@
 import React from "react";
-import { urlImg } from "/workspace/cineverse-app/src/api/api-path-img.js";
+import { urlImg } from "../../api/api-path-img";
 import "./MovieComponent.css";
 
 export const MovieComponent = ({movie, handleWatchClick, removeWatchedMovie}) => {
